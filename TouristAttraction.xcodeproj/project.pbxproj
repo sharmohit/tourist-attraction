@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9135162826189D3E00884116 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135162726189D3E00884116 /* Session.swift */; };
 		915D7784261766D600316AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915D7783261766D600316AF0 /* AppDelegate.swift */; };
 		915D7786261766D600316AF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915D7785261766D600316AF0 /* SceneDelegate.swift */; };
-		915D7788261766D600316AF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915D7787261766D600316AF0 /* ViewController.swift */; };
+		915D7788261766D600316AF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915D7787261766D600316AF0 /* LoginViewController.swift */; };
 		915D778B261766D600316AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915D7789261766D600316AF0 /* Main.storyboard */; };
 		915D778D261766D700316AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915D778C261766D700316AF0 /* Assets.xcassets */; };
 		915D7790261766D700316AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915D778E261766D700316AF0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9135162726189D3E00884116 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		915D7780261766D600316AF0 /* TouristAttraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouristAttraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		915D7783261766D600316AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		915D7785261766D600316AF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		915D7787261766D600316AF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		915D7787261766D600316AF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		915D778A261766D600316AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		915D778C261766D700316AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		915D778F261766D700316AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		913516262618907200884116 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9135162726189D3E00884116 /* Session.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		915D7777261766D600316AF0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +66,10 @@
 		915D7782261766D600316AF0 /* TouristAttraction */ = {
 			isa = PBXGroup;
 			children = (
+				913516262618907200884116 /* Classes */,
 				915D7783261766D600316AF0 /* AppDelegate.swift */,
 				915D7785261766D600316AF0 /* SceneDelegate.swift */,
-				915D7787261766D600316AF0 /* ViewController.swift */,
+				915D7787261766D600316AF0 /* LoginViewController.swift */,
 				915D7789261766D600316AF0 /* Main.storyboard */,
 				915D778C261766D700316AF0 /* Assets.xcassets */,
 				915D778E261766D700316AF0 /* LaunchScreen.storyboard */,
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				915D7788261766D600316AF0 /* ViewController.swift in Sources */,
+				9135162826189D3E00884116 /* Session.swift in Sources */,
+				915D7788261766D600316AF0 /* LoginViewController.swift in Sources */,
 				915D7784261766D600316AF0 /* AppDelegate.swift in Sources */,
 				915D7786261766D600316AF0 /* SceneDelegate.swift in Sources */,
 			);
