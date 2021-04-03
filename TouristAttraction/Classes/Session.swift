@@ -9,7 +9,21 @@ import Foundation
 
 class Session {
     
+    let defaults = UserDefaults.standard
     let usernamePasswordMap:[String:String] = ["thanos@gmail.com":"5555", "wonderwoman@yahoo.com":"abcd"]
+    
+    func initiateLogin() -> Bool {
+        
+        let username = defaults.string(forKey:"user") ?? ""
+        let password = defaults.string(forKey:"pass") ?? ""
+        
+        if username != "" &&
+            password != "" {
+            return self.login(username:username, password:password, isSaveLogin:false)
+        }
+        
+        return false
+    }
     
     func isValidUsername(username:String) -> Bool {
         if usernamePasswordMap[username] != nil {
@@ -26,8 +40,10 @@ class Session {
         for user in usernamePasswordMap {
             if username == user.key &&
                 password == user.value {
-                print("Login Success")
-                print("Save login is \(isSaveLogin)")
+                if isSaveLogin {
+                    defaults.set(username, forKey:"user")
+                    defaults.set(password, forKey:"pass")
+                }
                 return true
             }
         }

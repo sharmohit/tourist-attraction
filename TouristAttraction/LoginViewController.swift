@@ -17,7 +17,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if session.initiateLogin() {
+            print("Restored Login")
+        }
     }
     
     @IBAction func loginWasTapped(_ sender: UIButton) {
