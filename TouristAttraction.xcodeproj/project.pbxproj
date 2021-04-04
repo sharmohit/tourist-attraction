@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		9135162826189D3E00884116 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135162726189D3E00884116 /* Session.swift */; };
+		913788AF2619764900D179B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913788AE2619764900D179B0 /* HomeViewController.swift */; };
+		913788B72619A22500D179B0 /* AttractionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913788B62619A22500D179B0 /* AttractionsViewController.swift */; };
 		915D7784261766D600316AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915D7783261766D600316AF0 /* AppDelegate.swift */; };
 		915D7786261766D600316AF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915D7785261766D600316AF0 /* SceneDelegate.swift */; };
 		915D7788261766D600316AF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915D7787261766D600316AF0 /* LoginViewController.swift */; };
 		915D778B261766D600316AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915D7789261766D600316AF0 /* Main.storyboard */; };
 		915D778D261766D700316AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915D778C261766D700316AF0 /* Assets.xcassets */; };
 		915D7790261766D700316AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915D778E261766D700316AF0 /* LaunchScreen.storyboard */; };
+		91ECED38261900E90044C64E /* attractions.json in Resources */ = {isa = PBXBuildFile; fileRef = 91ECED37261900E90044C64E /* attractions.json */; };
+		91ECED3B261901500044C64E /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECED3A261901500044C64E /* Attraction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9135162726189D3E00884116 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		913788AE2619764900D179B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		913788B62619A22500D179B0 /* AttractionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionsViewController.swift; sourceTree = "<group>"; };
 		915D7780261766D600316AF0 /* TouristAttraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouristAttraction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		915D7783261766D600316AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		915D7785261766D600316AF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		915D778C261766D700316AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		915D778F261766D700316AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		915D7791261766D700316AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91ECED37261900E90044C64E /* attractions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = attractions.json; sourceTree = "<group>"; };
+		91ECED3A261901500044C64E /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				9135162726189D3E00884116 /* Session.swift */,
+				91ECED3A261901500044C64E /* Attraction.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -66,16 +75,27 @@
 		915D7782261766D600316AF0 /* TouristAttraction */ = {
 			isa = PBXGroup;
 			children = (
+				91ECED40261902E90044C64E /* Views */,
 				913516262618907200884116 /* Classes */,
 				915D7783261766D600316AF0 /* AppDelegate.swift */,
 				915D7785261766D600316AF0 /* SceneDelegate.swift */,
-				915D7787261766D600316AF0 /* LoginViewController.swift */,
 				915D7789261766D600316AF0 /* Main.storyboard */,
 				915D778C261766D700316AF0 /* Assets.xcassets */,
 				915D778E261766D700316AF0 /* LaunchScreen.storyboard */,
 				915D7791261766D700316AF0 /* Info.plist */,
+				91ECED37261900E90044C64E /* attractions.json */,
 			);
 			path = TouristAttraction;
+			sourceTree = "<group>";
+		};
+		91ECED40261902E90044C64E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				915D7787261766D600316AF0 /* LoginViewController.swift */,
+				913788AE2619764900D179B0 /* HomeViewController.swift */,
+				913788B62619A22500D179B0 /* AttractionsViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91ECED38261900E90044C64E /* attractions.json in Resources */,
 				915D7790261766D700316AF0 /* LaunchScreen.storyboard in Resources */,
 				915D778D261766D700316AF0 /* Assets.xcassets in Resources */,
 				915D778B261766D600316AF0 /* Main.storyboard in Resources */,
@@ -150,8 +171,11 @@
 			files = (
 				9135162826189D3E00884116 /* Session.swift in Sources */,
 				915D7788261766D600316AF0 /* LoginViewController.swift in Sources */,
+				91ECED3B261901500044C64E /* Attraction.swift in Sources */,
 				915D7784261766D600316AF0 /* AppDelegate.swift in Sources */,
+				913788AF2619764900D179B0 /* HomeViewController.swift in Sources */,
 				915D7786261766D600316AF0 /* SceneDelegate.swift in Sources */,
+				913788B72619A22500D179B0 /* AttractionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

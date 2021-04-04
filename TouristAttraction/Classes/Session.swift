@@ -19,7 +19,7 @@ class Session {
         
         if username != "" &&
             password != "" {
-            return self.login(username:username, password:password, isSaveLogin:false)
+            return self.login(username:username, password:password, isSaveLogin:true)
         }
         
         return false

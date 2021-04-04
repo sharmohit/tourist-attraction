@@ -17,9 +17,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if session.initiateLogin() {
             print("Restored Login")
+            showHomeView(animated:false)
         }
     }
     
@@ -37,7 +40,9 @@ class LoginViewController: UIViewController {
             if session.login(username:usernameTextField.text ?? "",
                              password:passwordTextField.text ?? "",
                              isSaveLogin:saveLoginSwitch.isOn) {
-                showAlert(title:"Welcome", message:"\(usernameTextField.text ?? "")")
+                //showAlert(title:"Welcome", message:"\(usernameTextField.text ?? "")")
+                showHomeView(animated:true)
+
             } else {
                 showAlert(title:"Error", message:"Invalid username or password")
             }
@@ -52,5 +57,15 @@ class LoginViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
+    }
+    
+    func showHomeView(animated:Bool) {
+        guard let homeView = storyboard?.instantiateViewController(identifier: "home_vc") as? HomeViewController else {
+                    print("Cannot find the second screen!")
+                    return
+                }
+        homeView.view.backgroundColor = .white
+        homeView.modalPresentationStyle = .fullScreen
+        present(homeView, animated:animated)
     }
 }

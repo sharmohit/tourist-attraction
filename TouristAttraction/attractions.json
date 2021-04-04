@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Eiffel Tower",
+    "description": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Locally nicknamed \"Ladamedefer\", it was constructed from 1887 to 1889 as the entrance to the 1889 World's Fair and was initially criticised by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognisable structures in the world. The Eiffel Tower is the most-visited paid monument in the world; 6.91 million people ascended it in 2015. The tower is 324 metres tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. It was the first structure in the world to surpass both the 200 meter and 300 meter mark in height.",
+    "icon": "EiffelTower",
+    "photos": [
+      "EiffelTower1",
+      "EiffelTower2",
+      "EiffelTower3"
+    ],
+    "address": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
+    "phone": "+33 892 70 12 39",
+    "website": "https://www.toureiffel.paris/",
+    "price": "€16,70"
+  },
+  {
+    "name": "Louvre Museum",
+    "description": "The Louvre, or the Louvre Museum, is the world's largest art museum and a historic monument in Paris, France, and is best known for being the home of the Mona Lisa. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement. Approximately 38,000 objects from prehistory to the 21st century are exhibited over an area of 72,735 square meters. In 2019, the Louvre received 9.6 million visitors, making it the most visited museum in the world. However, the number of visitors plunged by 72 percent to 2.7 million visitors in 2020, due to the COVID-19 pandemic and the drop in the number of foreign visitors. The museum is housed in the Louvre Palace, originally built as the Louvre castle in the late 12th to 13th century under Philip II. Remnants of the fortress are visible in the basement of the museum. Due to urban expansion, the fortress eventually lost its defensive function, and in 1546 Francis I converted it into the primary residence of the French Kings. The building was extended many times to form the present Louvre Palace.",
+    "icon": "LouvreMuseum",
+    "photos": [
+      "LouvreMuseum1",
+      "LouvreMuseum2",
+      "LouvreMuseum3"
+    ],
+    "address": "Rue de Rivoli, 75001 Paris, France",
+    "phone": "+33 1 40 20 50 50",
+    "website": "https://www.louvre.fr/",
+    "price": "€17"
+  },
+  {
+    "name": "Arc de Triomphe",
+    "description": "The Arc de Triomphe de l'Étoile is one of the most famous monuments in Paris, France, standing at the western end of the Champs-Élysées at the centre of Place Charles de Gaulle, formerly named Place de l'Étoile—the étoile or \"star\" of the juncture formed by its twelve radiating avenues. The location of the arc and the plaza is shared between three arrondissements, 16th, 17th, and 8th. The Arc de Triomphe honours those who fought and died for France in the French Revolutionary and Napoleonic Wars, with the names of all French victories and generals inscribed on its inner and outer surfaces. Beneath its vault lies the Tomb of the Unknown Soldier from World War I. As the central cohesive element of the Axe historique, the Arc de Triomphe was designed by Jean Chalgrin in 1806; its iconographic programme pits heroically nude French youths against bearded Germanic warriors in chain mail. It set the tone for public monuments with triumphant patriotic messages. Inspired by the Arch of Titus in Rome, Italy, the Arc de Triomphe has an overall height of 50 metres, width of 45 m and depth of 22 m, while its large vault is 29.19 m high and 14.62 m wide.",
+    "icon": "ArcdeTriomphe",
+    "photos": [
+      "ArcdeTriomphe1",
+      "ArcdeTriomphe2",
+      "ArcdeTriomphe3"
+    ],
+    "address": "Place Charles de Gaulle, 75008 Paris, France",
+    "phone": "+33 1 55 37 73 77",
+    "website": "http://www.paris-arc-de-triomphe.fr/",
+    "price": "€13"
+  }
+]
