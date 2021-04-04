@@ -16,6 +16,7 @@
 		915D778B261766D600316AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915D7789261766D600316AF0 /* Main.storyboard */; };
 		915D778D261766D700316AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 915D778C261766D700316AF0 /* Assets.xcassets */; };
 		915D7790261766D700316AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 915D778E261766D700316AF0 /* LaunchScreen.storyboard */; };
+		918BF920261A11AD00C57A12 /* AttractionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918BF91F261A11AD00C57A12 /* AttractionDetailsViewController.swift */; };
 		91ECED38261900E90044C64E /* attractions.json in Resources */ = {isa = PBXBuildFile; fileRef = 91ECED37261900E90044C64E /* attractions.json */; };
 		91ECED3B261901500044C64E /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ECED3A261901500044C64E /* Attraction.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		915D778C261766D700316AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		915D778F261766D700316AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		915D7791261766D700316AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918BF91F261A11AD00C57A12 /* AttractionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionDetailsViewController.swift; sourceTree = "<group>"; };
 		91ECED37261900E90044C64E /* attractions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = attractions.json; sourceTree = "<group>"; };
 		91ECED3A261901500044C64E /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				915D7787261766D600316AF0 /* LoginViewController.swift */,
 				913788AE2619764900D179B0 /* HomeViewController.swift */,
 				913788B62619A22500D179B0 /* AttractionsViewController.swift */,
+				918BF91F261A11AD00C57A12 /* AttractionDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				915D7784261766D600316AF0 /* AppDelegate.swift in Sources */,
 				913788AF2619764900D179B0 /* HomeViewController.swift in Sources */,
 				915D7786261766D600316AF0 /* SceneDelegate.swift in Sources */,
+				918BF920261A11AD00C57A12 /* AttractionDetailsViewController.swift in Sources */,
 				913788B72619A22500D179B0 /* AttractionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

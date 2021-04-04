@@ -7,14 +7,68 @@
 
 import UIKit
 
-class AttractionsViewController: UIViewController {
-
-    var attractions:[Attraction] = []
+class AttractionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var attractionsTableView: UITableView!
+    
+    var session = Session()
+    var attractions:[Attraction] = []
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadAttractions()
+        
+        attractionsTableView.delegate = self
+        attractionsTableView.dataSource = self
+        
+        attractionsTableView.tableFooterView = UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return attractions.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell = attractionsTableView.dequeueReusableCell(withIdentifier: "attractionCell")
+        
+        if cell == nil {
+            cell = UITableViewCell(
+                style:UITableViewCell.CellStyle.subtitle,
+                reuseIdentifier:"attractionCell")
+        }
+        
+        cell?.textLabel?.text = attractions[indexPath.row].name
+        
+        return cell!
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailsView = storyboard?.instantiateViewController(identifier: "details_vc") as? AttractionDetailsViewController else {
+                    print("Cannot find the second screen!")
+                    return
+                }
+        detailsView.session = self.session
+        detailsView.attraction = attractions[indexPath.row]
+        
+        detailsView.view.backgroundColor = .white
+        detailsView.modalPresentationStyle = .fullScreen
+        detailsView.modalTransitionStyle = .crossDissolve
+        show(detailsView, sender:self)
+    }
+    
+    @IBAction func logoutWasTapped(_ sender: Any) {
+        self.session.logout()
+        guard let loginView = storyboard?.instantiateViewController(identifier: "login_vc") as? LoginViewController else {
+                    print("Cannot find the second screen!")
+                    return
+                }
+        loginView.view.backgroundColor = .white
+        loginView.modalPresentationStyle = .fullScreen
+        loginView.modalTransitionStyle = .crossDissolve
+        present(loginView, animated:true)
     }
     
     func loadAttractions() {
@@ -26,7 +80,6 @@ class AttractionsViewController: UIViewController {
                 
                 for attraction in attractions {
                     self.attractions.append(attraction)
-                    print("\(attraction.name)")
                 }
             } catch {
                 print("Cannot load file")

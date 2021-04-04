@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if session.initiateLogin() {
-            print("Restored Login")
             showHomeView(animated:false)
         }
     }
@@ -40,7 +39,6 @@ class LoginViewController: UIViewController {
             if session.login(username:usernameTextField.text ?? "",
                              password:passwordTextField.text ?? "",
                              isSaveLogin:saveLoginSwitch.isOn) {
-                //showAlert(title:"Welcome", message:"\(usernameTextField.text ?? "")")
                 showHomeView(animated:true)
 
             } else {

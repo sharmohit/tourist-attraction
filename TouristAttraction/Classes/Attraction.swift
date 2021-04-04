@@ -16,4 +16,16 @@ struct Attraction : Codable {
     let phone:String
     let website:String
     let price:String
+    
+    init()
+    {
+        self.name = ""
+        self.description = ""
+        self.icon = ""
+        self.photos = []
+        self.address = ""
+        self.phone = ""
+        self.website = ""
+        self.price = ""
+    }
 }

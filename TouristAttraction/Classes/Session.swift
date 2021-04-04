@@ -51,6 +51,7 @@ class Session {
     }
     
     func logout() {
-        
+        defaults.set("", forKey:"user")
+        defaults.set("", forKey:"pass")
     }
 }
