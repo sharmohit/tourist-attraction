@@ -58,6 +58,7 @@ class AttractionsViewController: UIViewController, UITableViewDelegate, UITableV
                     return
                 }
         detailsView.session = self.session
+        detailsView.attractionIndex = indexPath.row
         detailsView.attraction = attractions[indexPath.row]
         
         detailsView.view.backgroundColor = .white
