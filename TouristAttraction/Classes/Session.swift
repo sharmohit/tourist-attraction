@@ -11,6 +11,7 @@ class Session {
     
     let defaults = UserDefaults.standard
     let usernamePasswordMap:[String:String] = ["thanos@gmail.com":"5555", "wonderwoman@yahoo.com":"abcd"]
+    var currentUsername:String = ""
     
     func initiateLogin() -> Bool {
         
@@ -44,6 +45,7 @@ class Session {
                     defaults.set(username, forKey:"user")
                     defaults.set(password, forKey:"pass")
                 }
+                self.currentUsername = username
                 return true
             }
         }

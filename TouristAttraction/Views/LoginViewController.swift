@@ -62,6 +62,7 @@ class LoginViewController: UIViewController {
                     print("Cannot find the second screen!")
                     return
                 }
+        homeView.session = self.session
         homeView.view.backgroundColor = .white
         homeView.modalPresentationStyle = .fullScreen
         present(homeView, animated:animated)

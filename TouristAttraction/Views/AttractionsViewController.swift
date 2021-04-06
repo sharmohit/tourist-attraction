@@ -7,12 +7,13 @@
 
 import UIKit
 
-class AttractionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class AttractionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AttractionCellDelegate {
+
     @IBOutlet weak var attractionsTableView: UITableView!
     
     var session = Session()
     var attractions:[Attraction] = []
+    var defaults = UserDefaults.standard
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class AttractionsViewController: UIViewController, UITableViewDelegate, UITableV
         
         attractionsTableView.delegate = self
         attractionsTableView.dataSource = self
-        
+        attractionsTableView.rowHeight = 240
         attractionsTableView.tableFooterView = UIView()
     }
     
@@ -31,16 +32,22 @@ class AttractionsViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = attractionsTableView.dequeueReusableCell(withIdentifier: "attractionCell")
+        var cell = attractionsTableView.dequeueReusableCell(withIdentifier: "attractionCell") as? AttractionCell
         
         if cell == nil {
-            cell = UITableViewCell(
-                style:UITableViewCell.CellStyle.subtitle,
+            cell = AttractionCell(
+                style:AttractionCell.CellStyle.default,
                 reuseIdentifier:"attractionCell")
         }
         
-        cell?.textLabel?.text = attractions[indexPath.row].name
-        
+        cell?.delegate = self
+        cell?.indexPath = indexPath
+        cell?.iconImageView.contentMode = .redraw
+        let attraction = attractions[indexPath.row]
+        cell?.nameLabel.text = attraction.name
+        cell?.iconImageView.image = UIImage(named:attraction.icon)
+        cell?.addressLabel.text = attraction.address
+        cell?.updateWishButton(isWishList:defaults.bool(forKey:"\(self.session.currentUsername)wishList\(indexPath.row)"))
         return cell!
         
     }
@@ -57,6 +64,10 @@ class AttractionsViewController: UIViewController, UITableViewDelegate, UITableV
         detailsView.modalPresentationStyle = .fullScreen
         detailsView.modalTransitionStyle = .crossDissolve
         show(detailsView, sender:self)
+    }
+    
+    func addWishListWasTapped(indexPath:IndexPath, isWishList:Bool) {
+        defaults.setValue(isWishList, forKey:"\(self.session.currentUsername)wishList\(indexPath.row)")
     }
     
     @IBAction func logoutWasTapped(_ sender: Any) {
