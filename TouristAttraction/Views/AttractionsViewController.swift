@@ -71,7 +71,7 @@ class AttractionsViewController: UIViewController, UITableViewDelegate, UITableV
         defaults.setValue(isWishList, forKey:"\(self.session.currentUsername)wishList\(indexPath.row)")
     }
     
-    @IBAction func logoutWasTapped(_ sender: Any) {
+    @IBAction func logoutWasTapped(_ sender: UIButton) {
         self.session.logout()
         guard let loginView = storyboard?.instantiateViewController(identifier: "login_vc") as? LoginViewController else {
                     print("Cannot find the second screen!")

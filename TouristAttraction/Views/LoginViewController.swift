@@ -11,12 +11,16 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var saveLoginSwitch: UISwitch!
     
     let session:Session = Session()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveLoginSwitch.isOn = false
+        loginButton.layer.cornerRadius = 5
     }
     
     override func viewDidAppear(_ animated: Bool) {

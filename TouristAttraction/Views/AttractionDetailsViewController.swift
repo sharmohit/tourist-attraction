@@ -66,7 +66,9 @@ class AttractionDetailsViewController: UIViewController {
            UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+        #if targetEnvironment(simulator)
         showAlert(title:"Unsupported", message:"Call feature is not available on simulator")
+        #endif
     }
     
     @IBAction func websiteWasTapped(_ sender: UIButton) {

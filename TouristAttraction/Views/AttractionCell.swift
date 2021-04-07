@@ -9,6 +9,7 @@ import UIKit
 
 class AttractionCell: UITableViewCell {
     
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -28,12 +29,13 @@ class AttractionCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    @IBAction func addWishListWasTapped(_ sender: Any) {
+    
+    @IBAction func addWishListWasTapped(_ sender: UIButton) {
         self.isWishList.toggle()
         updateWishButton(isWishList:self.isWishList)
         self.delegate?.addWishListWasTapped(indexPath:self.indexPath, isWishList:self.isWishList)
     }
+    
     
     func updateWishButton(isWishList:Bool) {
         self.isWishList = isWishList
