@@ -6,12 +6,13 @@
     "photos": [
       "EiffelTower1",
       "EiffelTower2",
-      "EiffelTower3"
+      "EiffelTower3",
+      "EiffelTower4"
     ],
     "address": "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
     "phone": "+33 892 70 12 39",
     "website": "https://www.toureiffel.paris/",
-    "price": "€16,70"
+    "price": "€16.70"
   },
   {
     "name": "Louvre Museum",
@@ -20,7 +21,8 @@
     "photos": [
       "LouvreMuseum1",
       "LouvreMuseum2",
-      "LouvreMuseum3"
+      "LouvreMuseum3",
+      "LouvreMuseum4"
     ],
     "address": "Rue de Rivoli, 75001 Paris, France",
     "phone": "+33 1 40 20 50 50",
@@ -34,11 +36,42 @@
     "photos": [
       "ArcdeTriomphe1",
       "ArcdeTriomphe2",
-      "ArcdeTriomphe3"
+      "ArcdeTriomphe3",
+      "ArcdeTriomphe4"
     ],
     "address": "Place Charles de Gaulle, 75008 Paris, France",
     "phone": "+33 1 55 37 73 77",
-    "website": "http://www.paris-arc-de-triomphe.fr/",
+    "website": "https://www.monuments-nationaux.fr/en/Discovery-area/Arc-de-Triomphe-Paris",
     "price": "€13"
+  },
+  {
+    "name": "Luxembourg Gardens",
+    "description": "The Jardin du Luxembourg, also known in English as the Luxembourg Gardens, is located in the 6th arrondissement of Paris, France. It was created beginning in 1612 by Marie de' Medici, the widow of King Henry IV of France, for a new residence she constructed, the Luxembourg Palace. The garden today is owned by the French Senate, which meets in the Palace. It covers 23 hectares and is known for its lawns, tree-lined promenades, flowerbeds, model sailboats on its circular basin, and picturesque Medici Fountain, built in 1620. The name Luxembourg comes from the Latin Mons Lucotitius, the name of the hill where the garden is located.",
+    "icon": "LuxembourgGardens",
+    "photos": [
+      "LuxembourgGardens1",
+      "LuxembourgGardens2",
+      "LuxembourgGardens3",
+      "LuxembourgGardens4"
+    ],
+    "address": "Le Jardin du Luxembourg, 75006 Paris, France",
+    "phone": "+33 1 42 34 20 00",
+    "website": "https://www.senat.fr/visite/jardin/",
+    "price": "€1.50"
+  },
+  {
+    "name": "Moulin Rouge",
+    "description": "Moulin Rouge is a cabaret in Paris, France. The original house, which burned down in 1915, was co-founded in 1889 by Charles Zidler and Joseph Oller, who also owned the Paris Olympia. Close to Montmartre in the Paris district of Pigalle on Boulevard de Clichy in the 18th arrondissement, it is marked by the red windmill on its roof. The closest métro station is Blanche. Moulin Rouge is best known as the birthplace of the modern form of the can-can dance. Originally introduced as a seductive dance by the courtesans who operated from the site, the can-can dance revue evolved into a form of entertainment of its own and led to the introduction of cabarets across Europe. Today, the Moulin Rouge is a tourist attraction, offering musical dance entertainment for visitors from around the world. The club's decor still contains much of the romance of fin de siècle France.",
+    "icon": "MoulinRouge",
+    "photos": [
+      "MoulinRouge1",
+      "MoulinRouge2",
+      "MoulinRouge3",
+      "MoulinRouge4"
+    ],
+    "address": "82 Boulevard de Clichy, 75018 Paris, France",
+    "phone": "+33 1 53 09 82 82",
+    "website": "https://www.moulinrouge.fr/",
+    "price": "€185"
   }
 ]

@@ -38,9 +38,9 @@ class AttractionCell: UITableViewCell {
     func updateWishButton(isWishList:Bool) {
         self.isWishList = isWishList
         if isWishList {
-            addWishListButton.setTitle("Remove WishList", for:UIControl.State.normal)
+            addWishListButton.tintColor = .red
         } else {
-            addWishListButton.setTitle("Add WishList", for:UIControl.State.normal)
+            addWishListButton.tintColor = .gray
         }
     }
 }

@@ -22,7 +22,5 @@ class HomeViewController: UITabBarController {
         let wishListNavC = self.viewControllers?[1] as! UINavigationController
         let wishListVC = wishListNavC.topViewController as! WishListViewController
         wishListVC.session = self.session
-        print(wishListVC.session.currentUsername)
-        
     }
 }

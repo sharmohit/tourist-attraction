@@ -42,12 +42,12 @@ class AttractionsViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell?.delegate = self
         cell?.indexPath = indexPath
-        cell?.iconImageView.contentMode = .redraw
         let attraction = attractions[indexPath.row]
-        cell?.nameLabel.text = attraction.name
+        cell?.nameLabel.text = " \(attraction.name)"
         cell?.iconImageView.image = UIImage(named:attraction.icon)
-        cell?.addressLabel.text = attraction.address
+        cell?.addressLabel.text = " \(attraction.address)"
         cell?.updateWishButton(isWishList:defaults.bool(forKey:"\(self.session.currentUsername)wishList\(indexPath.row)"))
+        
         return cell!
         
     }

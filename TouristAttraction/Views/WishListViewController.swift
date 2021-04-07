@@ -45,7 +45,7 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
                 style:WishListCell.CellStyle.default,
                 reuseIdentifier:"wishListCell")
         }
-        cell?.attractionNameLabel.text = wishList[indexPath.row].name
+        cell?.attractionNameLabel.text = " \(wishList[indexPath.row].name)"
         cell?.iconImageView.image = UIImage(named:wishList[indexPath.row].icon)
         
         return cell!
@@ -76,7 +76,6 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
         for index in 0..<self.attractions.count {
             if UserDefaults.standard.bool(forKey:"\(self.session.currentUsername)wishList\(index)") {
                 self.wishList.append(attractions[index])
-                print("\(self.attractions[index].name) is in WishList")
             }
         }
         

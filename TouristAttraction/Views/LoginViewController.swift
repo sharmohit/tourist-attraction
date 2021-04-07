@@ -64,6 +64,7 @@ class LoginViewController: UIViewController {
                 }
         homeView.session = self.session
         homeView.view.backgroundColor = .white
+        homeView.modalTransitionStyle = .crossDissolve
         homeView.modalPresentationStyle = .fullScreen
         present(homeView, animated:animated)
     }

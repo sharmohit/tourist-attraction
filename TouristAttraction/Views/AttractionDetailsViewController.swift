@@ -9,10 +9,21 @@ import UIKit
 
 class AttractionDetailsViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var photo1ImageView: UIImageView!
+    @IBOutlet weak var photo2ImageView: UIImageView!
+    @IBOutlet weak var photo3ImageView: UIImageView!
+    @IBOutlet weak var photo4ImageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var ratingSlider: UISlider!
+    @IBOutlet weak var detailsScrollView: UIScrollView!
+    @IBOutlet weak var scrollContentView: UIView!
     
     var session = Session()
     var attractionIndex = 0
@@ -22,13 +33,24 @@ class AttractionDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("\(self.attraction.name) Details")
-        phoneLabel.text = attraction.phone
+        self.detailsScrollView.contentSize = CGSize(width:self.scrollContentView.frame.size.width, height:self.scrollContentView.frame.size.height)
+        
+        self.phoneLabel.text = attraction.phone
+        self.iconImageView.image = UIImage(named:attraction.icon)
+        self.photo1ImageView.image = UIImage(named:attraction.photos[0])
+        self.photo2ImageView.image = UIImage(named:attraction.photos[1])
+        self.photo3ImageView.image = UIImage(named:attraction.photos[2])
+        self.photo4ImageView.image = UIImage(named:attraction.photos[3])
+        self.nameLabel.text = " \(attraction.name)"
+        self.addressLabel.text = " \(attraction.address)"
+        self.priceLabel.text = attraction.price
+        self.descriptionLabel.text = attraction.description
+        self.websiteLabel.text = attraction.website
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        ratingSlider.value = defaults.float(forKey:"\(self.session.currentUsername)rating\(attractionIndex)")
-        ratingLabel.text = "Rated \(Int(ratingSlider.value.rounded(.toNearestOrAwayFromZero)))"
+        self.ratingSlider.value = defaults.float(forKey:"\(self.session.currentUsername)rating\(attractionIndex)")
+        self.ratingLabel.text = "\(Int(ratingSlider.value.rounded(.toNearestOrAwayFromZero)))"
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -36,7 +58,7 @@ class AttractionDetailsViewController: UIViewController {
     }
     
     @IBAction func ratingWasMoved(_ sender: UISlider) {
-        ratingLabel.text = "Rated \(Int(ratingSlider.value.rounded(.toNearestOrAwayFromZero)))"
+        self.ratingLabel.text = "\(Int(ratingSlider.value.rounded(.toNearestOrAwayFromZero)))"
     }
     
     @IBAction func callWasTapped(_ sender: UIButton) {
@@ -44,6 +66,7 @@ class AttractionDetailsViewController: UIViewController {
            UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+        showAlert(title:"Unsupported", message:"Call feature is not available on simulator")
     }
     
     @IBAction func websiteWasTapped(_ sender: UIButton) {
@@ -70,5 +93,12 @@ class AttractionDetailsViewController: UIViewController {
         loginView.modalPresentationStyle = .fullScreen
         loginView.modalTransitionStyle = .crossDissolve
         present(loginView, animated:true)
+    }
+    
+    func showAlert(title:String, message:String) {
+        let alert = UIAlertController(title:title, message:message, preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 }

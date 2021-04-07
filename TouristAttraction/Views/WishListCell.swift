@@ -8,9 +8,10 @@
 import UIKit
 
 class WishListCell: UITableViewCell {
-
-    @IBOutlet weak var attractionNameLabel: UILabel!
+    
     @IBOutlet weak var iconImageView: UIImageView!
+    
+    @IBOutlet weak var attractionNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
