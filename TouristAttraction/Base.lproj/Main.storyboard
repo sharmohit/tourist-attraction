@@ -251,13 +251,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC6-Ri-lWQ">
-                                <rect key="frame" x="109" y="210" width="172" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-SV-vdU">
                                 <rect key="frame" x="132" y="173" width="126" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -265,11 +258,49 @@
                                     <action selector="ratingWasMoved:" destination="1wI-KJ-KF6" eventType="valueChanged" id="B5N-Vp-kQM"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC6-Ri-lWQ">
+                                <rect key="frame" x="109" y="210" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amp-K6-VYD">
+                                <rect key="frame" x="115" y="298" width="141" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soW-MN-1hX">
+                                <rect key="frame" x="272" y="298" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="callWasTapped:" destination="1wI-KJ-KF6" eventType="touchUpInside" id="XjI-sd-LqK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-kX-z5c">
+                                <rect key="frame" x="115" y="386" width="141" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4x-sj-CHc">
+                                <rect key="frame" x="276" y="381" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open"/>
+                                <connections>
+                                    <action selector="websiteWasTapped:" destination="1wI-KJ-KF6" eventType="touchUpInside" id="XAF-77-nYm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FNs-CO-1yJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Attraction Details" id="dWI-Qi-JDi">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="W1R-gc-pII"/>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="3RQ-1W-Csz">
                             <connections>
                                 <action selector="logoutWasTapped:" destination="1wI-KJ-KF6" id="Sf3-ZX-RVM"/>
@@ -277,13 +308,31 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="phoneLabel" destination="amp-K6-VYD" id="5ly-6Z-Ln1"/>
                         <outlet property="ratingLabel" destination="BC6-Ri-lWQ" id="j9O-Bf-D4E"/>
                         <outlet property="ratingSlider" destination="TIH-SV-vdU" id="S2p-v9-TgO"/>
+                        <outlet property="websiteLabel" destination="dqh-kX-z5c" id="1Hy-nO-sP6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWg-Tv-QoI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1652.3076923076922" y="531.75355450236964"/>
+        </scene>
+        <!--Website-->
+        <scene sceneID="5xw-ov-mBa">
+            <objects>
+                <viewController storyboardIdentifier="web_vc" id="zaw-33-y9E" customClass="WebViewController" customModule="TouristAttraction" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KDz-Sj-MBJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="omC-Il-Vuv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Website" id="cjx-XX-Lam"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJd-uo-YG4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-180" y="532"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="SG1-tp-5IO">
@@ -320,6 +369,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fI1-y0-PsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2386" y="532"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KD1-n6-dvi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OpK-Wi-OMA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zfy-pN-RY8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O5x-MH-EiK">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zaw-33-y9E" kind="relationship" relationship="rootViewController" id="ySG-zm-8tf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GdX-y9-J64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-906" y="532"/>
         </scene>
     </scenes>
     <resources>
